@@ -1,0 +1,87 @@
+{
+  "expo": {
+    "name": "CaloriVoice",
+    "slug": "calorivoice",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "calorivoice",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#000000",
+    "ios": {
+      "icon": "./assets/images/icon.png",
+      "bundleIdentifier": "com.calorivoice.app",
+      "usesAppleSignIn": true,
+      "backgroundColor": "#000000",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true,
+          "NSExceptionDomains": {
+            "localhost": {
+              "NSExceptionAllowsInsecureHTTPLoads": true,
+              "NSIncludesSubdomains": true
+            },
+            "127.0.0.1": {
+              "NSExceptionAllowsInsecureHTTPLoads": true
+            }
+          }
+        },
+        "NSMicrophoneUsageDescription": "CaloriVoice использует микрофон, чтобы надиктовывать, что вы съели.",
+        "NSHealthShareUsageDescription": "CaloriVoice читает рост, вес, пол и дату рождения для персональной нормы калорий.",
+        "NSHealthUpdateUsageDescription": "CaloriVoice может сохранять данные о питании в Apple Health."
+      }
+    },
+    "android": {
+      "usesCleartextTraffic": true,
+      "adaptiveIcon": {
+        "backgroundColor": "#1A2E24",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-dev-client",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "infoPlist": {
+              "NSAppTransportSecurity": {
+                "NSAllowsArbitraryLoads": true,
+                "NSAllowsLocalNetworking": true
+              }
+            }
+          },
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-router",
+      "expo-apple-authentication",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#000000",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 88
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      "expo-localization",
+      "@kingstinct/react-native-healthkit",
+      "expo-audio",
+      "expo-build-properties"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

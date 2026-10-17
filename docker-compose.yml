@@ -1,0 +1,85 @@
+# Go в Docker + SQS (AWS). ML на Mac локально (консоль):
+#   local-llms: local-llms/whisper/run.sh :8091, local-llms/laya/run.sh :8092
+#   LM Studio Local Server          :1234
+# Старт: см. RUN.md → backend/scripts/docker-up.sh
+
+name: calorivoice
+
+x-host-gateway: &host-gateway
+  extra_hosts:
+    - "host.docker.internal:host-gateway"
+
+x-go-build: &go-build
+  dockerfile: Dockerfile
+  args:
+    BUILDKIT_INLINE_CACHE: "1"
+
+services:
+  stt:
+    <<: *host-gateway
+    build:
+      context: ./backend/services/stt
+      <<: *go-build
+    image: calorivoice-stt:local
+    cpus: "1"
+    mem_limit: 256m
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      STT_ADDR: 0.0.0.0:8080
+      STT_UPSTREAM_URL: ${STT_UPSTREAM_URL:-http://host.docker.internal:8091}
+      STT_GUARD_URL: http://guard:8082
+      STT_INTAKE_URL: http://intake:8083
+      STT_PIPELINE_TIMEOUT_SEC: ${STT_PIPELINE_TIMEOUT_SEC:-180}
+
+  guard:
+    <<: *host-gateway
+    build:
+      context: ./backend/services/guard
+      <<: *go-build
+    image: calorivoice-guard:local
+    cpus: "1"
+    mem_limit: 256m
+    ports:
+      - "8082:8082"
+    env_file:
+      - .env
+    environment:
+      GUARD_ADDR: 0.0.0.0:8082
+      GUARD_UPSTREAM_URL: ${GUARD_UPSTREAM_URL:-http://host.docker.internal:8092}
+      GUARD_LAYA_MODEL: ${GUARD_LAYA_MODEL:-laya-multilingual}
+
+  intake:
+    <<: *host-gateway
+    build:
+      context: ./backend/services/intake
+      <<: *go-build
+    image: calorivoice-intake:local
+    cpus: "1"
+    mem_limit: 256m
+    ports:
+      - "8083:8083"
+    env_file:
+      - .env
+    environment:
+      INTAKE_ADDR: 0.0.0.0:8083
+      INTAKE_UPSTREAM_URL: ${INTAKE_UPSTREAM_URL:-http://host.docker.internal:1234/v1}
+      INTAKE_MODEL: ${INTAKE_MODEL:-qwen/qwen3.8-27b}
+      INTAKE_MAX_TOKENS: ${INTAKE_MAX_TOKENS:-2048}
+    depends_on:
+      guard:
+        condition: service_started
+
+  foods:
+    build:
+      context: ./backend/services/foods
+      <<: *go-build
+    image: calorivoice-foods:local
+    cpus: "0.5"
+    mem_limit: 128m
+    ports:
+      - "8084:8084"
+    environment:
+      FOODS_ADDR: 0.0.0.0:8084

@@ -1,0 +1,362 @@
+{
+  "common": {
+    "continue": "Continue →",
+    "done": "Done →",
+    "begin": "Begin →",
+    "back": "Back",
+    "email": "Email",
+    "changeEmail": "Change email",
+    "resendCode": "Didn't get a code? Send again",
+    "apple": "Apple",
+    "language": "Language",
+    "changeLanguage": "Change language",
+    "languageOptions": {
+      "en": "English",
+      "ru": "Русский"
+    },
+    "localeBadge": {
+      "en": "EN",
+      "ru": "RU"
+    }
+  },
+  "auth": {
+    "signInTitle": "Sign in",
+    "signInSubtitle": "One-time code to your email — no password.",
+    "sessionSaveError": "Could not save session.",
+    "appleOnlyIos": "Apple — iOS only",
+    "appleNeedsDevBuild": "Apple: development build required",
+    "appleUnavailable": "Apple unavailable",
+    "appleSignInFailed": "Apple sign in failed. Try again.",
+    "appleNoUserId": "Could not read Apple ID.",
+    "invalidEmail": "Invalid email",
+    "invalidOtp": "Enter 6 digits",
+    "sendCodeFailed": "Could not send code.",
+    "wrongCode": "Wrong code.",
+    "signInWithApple": "Sign in with Apple",
+    "devHint": "Dev: {{code}}",
+    "codeSentToEmail": "Check your inbox for the 6-digit code.",
+    "otpInputA11y": "Six-digit code input",
+    "otpHiddenA11y": "Hidden code field",
+    "api": {
+      "invalidEmail": "Enter a valid email.",
+      "invalidOtp": "Code must be 6 digits.",
+      "requestCodeFirst": "Request a code for this email first.",
+      "codeExpired": "Code expired. Request a new one."
+    }
+  },
+  "welcome": {
+    "line": "Welcome to",
+    "brand": "CaloriVoice"
+  },
+  "health": {
+    "import": "Import from Apple Health",
+    "fillFromAppleHealth": "Fill from Apple Health",
+    "importSexAndData": "Sex and data from Apple Health",
+    "iosOnly": "Apple Health is only available on iPhone.",
+    "expoGo": "Apple Health works in a development build (npm run ios:native), not in Expo Go.",
+    "comingSoon": "Apple Health coming soon: HealthKit native module required.",
+    "noData": "No data in Apple Health or permission denied.",
+    "alertTitle": "Apple Health",
+    "importFailed": "Could not import."
+  },
+  "onboarding": {
+    "step1": {
+      "title": "What's your goal?",
+      "subtitle": "We'll tailor calories and tips to your goal."
+    },
+    "step2": {
+      "title": "Biological sex",
+      "subtitle": "Used for daily targets (can import from Health)."
+    },
+    "step3": {
+      "title": "Date of birth",
+      "subtitle": "Age affects your daily calorie target."
+    },
+    "step4": {
+      "title": "Units",
+      "subtitle": "You can change this later in settings."
+    },
+    "step5": {
+      "title": "Height and current weight",
+      "subtitle": "Current stats for your diary."
+    },
+    "metrics": {
+      "heightLabel": "HEIGHT",
+      "currentWeightLabel": "CURRENT WEIGHT",
+      "targetWeightLabel": "TARGET WEIGHT",
+      "changeUnits": "↑↓ Change units"
+    },
+    "step6": {
+      "title": "Target weight",
+      "subtitle": "The weight you're aiming for."
+    },
+    "step7": {
+      "title": "Activity",
+      "subtitle": "What a typical week looks like for you."
+    },
+    "units": {
+      "bodyWeight": "Body weight",
+      "height": "Height",
+      "water": "Water",
+      "foodPortions": "Food portions",
+      "energy": "Energy"
+    },
+    "placeholders": {
+      "height": "Height ({{unit}})",
+      "weight": "Weight ({{unit}})",
+      "targetWeight": "Target weight ({{unit}})"
+    },
+    "goals": {
+      "lose_weight": {
+        "label": "Lose weight",
+        "hint": "Deficit and calorie control"
+      },
+      "maintain": {
+        "label": "Maintain weight",
+        "hint": "Balance without big swings"
+      },
+      "gain_weight": { "label": "Gain weight", "hint": "Surplus and protein" }
+    },
+    "sex": {
+      "female": "Female",
+      "male": "Male",
+      "other": "Other",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "activity": {
+      "sedentary": { "label": "Sedentary", "hint": "Desk job, few steps" },
+      "lightly_active": {
+        "label": "Lightly active",
+        "hint": "1–3 workouts per week"
+      },
+      "active": { "label": "Active", "hint": "3–5 workouts" },
+      "very_active": { "label": "Very active", "hint": "Almost every day" },
+      "athlete": { "label": "Athlete", "hint": "Twice daily / sports" }
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "openA11y": "Open profile",
+    "settingsA11y": "Settings",
+    "comingSoon": "Coming soon.",
+    "cancel": "Cancel",
+    "upgrade": "Upgrade",
+    "appleHealth": "Apple Health",
+    "prepareData": "Prepare my data",
+    "downloadHint": "A ZIP with a JSON file: your profile, diary, and settings — everything CaloriVoice holds about you.",
+    "deleteConfirm": "This removes your local profile and signs you out on this device.",
+    "sections": {
+      "personal": "Personal",
+      "info": "Info",
+      "account": "Account"
+    },
+    "menu": {
+      "goals": "Goals & Calculations",
+      "subscription": "Subscription",
+      "notifications": "Notifications",
+      "healthSync": "Health sync",
+      "appLanguage": "App Language",
+      "help": "Help",
+      "about": "About us",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "medical": "Medical Disclaimer",
+      "signInMethod": "Sign-in method",
+      "downloadData": "Download my data",
+      "deleteAccount": "Delete Account"
+    },
+    "fields": {
+      "goal": "Goal",
+      "sex": "Sex",
+      "birthDate": "Date of birth",
+      "activity": "Activity"
+    },
+    "metrics": {
+      "height": "Height",
+      "currentWeight": "Current weight",
+      "targetWeight": "Target weight"
+    },
+    "units": {
+      "kg": "kg",
+      "lb": "lb",
+      "cm": "cm",
+      "in": "in"
+    }
+  },
+  "home": {
+    "screenTitle": "Today",
+    "screenSubtitle": "Dashboard",
+    "dashboard": {
+      "headline": "Today",
+      "lead": "Your day at a glance. Open the meal chat from the bar below when you're ready to log food.",
+      "yesterday": "Yesterday",
+      "calendarTitle": "Calendar",
+      "calendar": {
+        "thisWeek": "This week",
+        "swipeHint": "Swipe sideways for other weeks. Tap a day or the calendar icon to pick any date.",
+        "jumpToTodayA11y": "Return to today",
+        "openPickerA11y": "Open calendar to choose a day",
+        "pickerTitle": "Choose day",
+        "pickerDone": "Done",
+        "pickerHint": "Tap a day to open your diary for that date.",
+        "closeA11y": "Close calendar",
+        "prevMonthA11y": "Previous month",
+        "nextMonthA11y": "Next month",
+        "dayA11y": "{{weekday}}, {{date}}"
+      },
+      "summaryTitle": "Summary",
+      "summaryHint": "Calories and macros for today will show here."
+    },
+    "diary": {
+      "nutrition": {
+        "expandA11y": "Expand nutrition details",
+        "collapseA11y": "Collapse nutrition details"
+      },
+      "eaten": "Eaten",
+      "eatenShort": "Eaten",
+      "remaining": "Remaining",
+      "remainingShort": "Left",
+      "goalKcal": "{{count}} kcal",
+      "calorieProgress": "{{percent}}% of daily goal",
+      "macroUnitG": "g",
+      "macroUnitMl": "ml",
+      "kcalUnit": "kcal",
+      "macroOfGoal": "of {{goal}} {{unit}}",
+      "macroRemaining": "{{count}} {{unit}} left",
+      "goalInfoA11y": "Daily calorie goal",
+      "empty": "Nothing logged yet",
+      "sectionKcal": "{{count}} kcal",
+      "waterProgress": "{{percent}}% of goal",
+      "waterAmount": "{{amount}} ml",
+      "measurementsHint": "Track progress, not feelings",
+      "expandedPlaceholder": "Meals you log will appear here.",
+      "foodSearch": {
+        "placeholder": "Search food…",
+        "examplePrefix": "e.g. ",
+        "create": "Create",
+        "clearA11y": "Clear search",
+        "addA11y": "Add {{name}}",
+        "noResults": "No products found. Try another name or create your own.",
+        "loadMore": "Load more",
+        "loadMoreA11y": "Load more search results",
+        "error": "Search is unavailable right now. Check your connection and try again.",
+        "loggedCount": "{{count}} items logged",
+        "proteinLetter": "P",
+        "fatLetter": "F",
+        "carbsLetter": "C",
+        "createTitle": "Create product",
+        "per100g": "Per 100 g",
+        "fieldName": "NAME",
+        "namePlaceholder": "Product name",
+        "fieldProtein": "PROTEIN g",
+        "fieldFat": "FAT g",
+        "fieldCarbs": "CARBS g",
+        "fieldEnergy": "ENERGY kcal",
+        "isDrink": "This is a drink",
+        "isDrinkHint": "Counts toward water in your diary (coming soon).",
+        "moreFields": "More fields ⌄",
+        "lessFields": "Fewer fields ⌃",
+        "fieldFiber": "FIBER g",
+        "fieldSugars": "SUGAR g",
+        "fieldSodium": "SODIUM mg",
+        "fieldSatFat": "SAT. FAT g",
+        "saveProduct": "Save product",
+        "portionLabel": "Portion",
+        "portionA11y": "Portion in grams",
+        "editPortionA11y": "Edit portion for {{name}}",
+        "confirmPortionA11y": "Add to meal",
+        "dismissPendingA11y": "Cancel selection",
+        "removeEntryA11y": "Remove {{name}} from meal",
+        "tableName": "NAME",
+        "tablePortion": "PORTION",
+        "tableKcal": "KCAL",
+        "portionDone": "Done",
+        "openDetailA11y": "Open details for {{name}}"
+      },
+      "foodDetail": {
+        "crumb": "Product · Per 100 g · {{category}}",
+        "categoryFood": "Food",
+        "categoryDrink": "Drinks",
+        "loggedPortion": "Logged: {{grams}} {{unit}} · {{kcal}} kcal",
+        "proteinShort": "PRO",
+        "fatShort": "FAT",
+        "carbsShort": "CARB",
+        "addedSugars": "Added sugar",
+        "drinkHint": "Drink",
+        "drinkYes": "Yes"
+      },
+      "macros": {
+        "kcalShort": "KCAL",
+        "proteinShort": "PRO",
+        "proteinTitle": "Protein",
+        "fatShort": "FAT",
+        "fatTitle": "Fat",
+        "carbsShort": "CARB",
+        "carbsTitle": "Carbs",
+        "waterShort": "H2O",
+        "waterTitle": "Water",
+        "proteinInfoA11y": "Protein info",
+        "fatInfoA11y": "Fat info",
+        "carbsInfoA11y": "Carbs info",
+        "waterInfoA11y": "Water info"
+      },
+      "sections": {
+        "breakfast": "Breakfast",
+        "lunch": "Lunch",
+        "dinner": "Dinner",
+        "snack": "Snack",
+        "water": "Water",
+        "measurements": "Measurements"
+      }
+    },
+    "signedIn": "You're in",
+    "searchPlaceholder": "What did you eat?",
+    "searchOpenChatA11y": "Open meal chat",
+    "chatTitle": "Meal chat",
+    "chatSubtitle": "Voice log & replies",
+    "chatEmptyTitle": "No meals yet",
+    "chatEmptyBody": "Use the bar below: tap to focus or hold the mic and describe what you ate.",
+    "chatEmpty": "Use the bar below: tap to focus or hold the mic and describe what you ate.",
+    "chatCloseA11y": "Close meal chat",
+    "backToDiary": "Today",
+    "signOut": "Sign out",
+    "voice": {
+      "tapHint": "Tap the mic and describe what you ate",
+      "recordingHint": "Tap again when you're done",
+      "processing": "Recognizing speech…",
+      "transcriptLabel": "Transcript",
+      "recordFailed": "Could not start recording.",
+      "transcribeFailed": "Backend error while transcribing. Check Whisper upstream (8091) and try again.",
+      "backendUnreachable": "Cannot reach {{url}}. docker-up.sh + Whisper + restart Metro (npm run ios).",
+      "devBackend": "Dev backend: {{url}}",
+      "devBackendOk": "Backend reachable (Go :8080 + Whisper :8091 on Mac)",
+      "devBackendFailSim": "Backend not reachable. docker compose up + Whisper; then npm run ios:build once (HTTP/ATS).",
+      "devBackendFailDevice": "On a real iPhone set EXPO_PUBLIC_STT_API_URL to http://YOUR_MAC_IP:8080 in mobile/.env and restart Metro.",
+      "guardChecking": "Checking safety…",
+      "guardPassed": "Check passed — you can log this meal.",
+      "guardFailed": "Check failed — message blocked.",
+      "guardUnavailable": "Safety check unavailable (RabbitMQ / Guard / Laya).",
+      "intakeChecking": "Parsing meal with local LLM…",
+      "intakeUnavailable": "Meal parser unavailable (Intake / LM Studio).",
+      "intakeLabel": "Parsed JSON",
+      "mealTitle": "Your meal",
+      "totalKcal": "~{{count}} kcal total",
+      "kcalUnit": "kcal",
+      "mealSummary": "Summary",
+      "intakeErrorTitle": "Could not parse meal",
+      "intakeBadShape": "Unexpected response shape.",
+      "guardReason": {
+        "out_of_scope": "Only food and calorie diary messages are allowed here.",
+        "mixed_or_off_topic": "Mixing food logging with other requests (crypto, prices, other people…) isn't allowed.",
+        "third_party_data": "Asking for someone else's personal data isn't allowed.",
+        "injection": "Looks like an unsafe or manipulative message.",
+        "laya_error": "Safety service error — try again."
+      },
+      "guardReasonUnknown": "Unknown reason ({{code}}).",
+      "unknownError": "Unknown error.",
+      "emptyTranscript": "No speech detected. Try again.",
+      "startA11y": "Start voice recording",
+      "stopA11y": "Stop and transcribe"
+    }
+  }
+}

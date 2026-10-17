@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CaloriVoice — a voice-first calorie diary for iOS. Tap the mic, describe what you ate, and stay on track with your goals."
+    />
+    <title>CaloriVoice — voice calorie diary</title>
+    <!-- Mark = CaloriVoiceLogo (app sign-in); PNG icon only for favicon / App Store -->
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="page-bg" aria-hidden="true">
+      <div class="page-bg__gradient"></div>
+      <div class="page-bg__blob page-bg__blob--a"></div>
+      <div class="page-bg__blob page-bg__blob--b"></div>
+    </div>
+
+    <header class="site-header" data-header>
+      <div class="wrap site-header__inner">
+        <a class="logo" href="/" aria-label="CaloriVoice home">
+          <span class="logo-mark">
+            <span class="logo-mark__glow"></span>
+            <img class="logo-mark__img" src="assets/calorivoice-mark.svg" width="36" height="36" alt="" />
+          </span>
+          <span class="logo__text">CaloriVoice</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button
+            type="button"
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-nav-toggle
+          >
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <ul class="nav__list" id="site-nav" data-nav-list>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#stack">Technology</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#waitlist">Early access</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--sm btn--primary header-cta" href="#waitlist">Get launch updates</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero__grid">
+          <div class="hero__copy">
+            <div class="hero__logo-mark">
+              <span class="logo-mark logo-mark--lg">
+                <span class="logo-mark__glow"></span>
+                <img class="logo-mark__img" src="assets/calorivoice-mark.svg" width="76" height="76" alt="" />
+              </span>
+            </div>
+            <p class="hero__badge">
+              <span class="hero__badge-dot" aria-hidden="true"></span>
+              Voice-first calorie diary · iOS
+            </p>
+            <h1 class="hero__title">
+              <span class="hero__welcome">Stop typing.</span>
+              <span class="hero__brand">Just say what you ate.</span>
+            </h1>
+            <p class="hero__lead">
+              CaloriVoice turns natural speech into a precise daily calorie picture — with on-device
+              transcription, AI meal parsing, and a guard that keeps your diary focused on&nbsp;food, not
+              noise.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--glow" href="#waitlist">Get early access</a>
+              <a class="btn btn--ghost" href="#stack">See the stack</a>
+            </div>
+            <ul class="hero__metrics" aria-label="Product highlights">
+              <li class="hero__metric">
+                <span class="hero__metric-value">&lt; 2s</span>
+                <span class="hero__metric-label">Voice → structured meal</span>
+              </li>
+              <li class="hero__metric">
+                <span class="hero__metric-value">100%</span>
+                <span class="hero__metric-label">Diary-first safety layer</span>
+              </li>
+              <li class="hero__metric">
+                <span class="hero__metric-value">24/7</span>
+                <span class="hero__metric-label">Calendar &amp; daily totals</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="phone">
+              <div class="phone__bezel">
+                <div class="phone__screen">
+                  <div class="mock-day">
+                    <span class="mock-day__label">Today</span>
+                    <span class="mock-day__kcal">1,420 <small>/ 1,800 kcal</small></span>
+                    <div class="mock-bar" style="--pct: 79%"></div>
+                  </div>
+                  <ul class="mock-meals">
+                    <li class="mock-meal">
+                      <span class="mock-meal__icon">🥣</span>
+                      <span class="mock-meal__text">Oatmeal with banana</span>
+                      <span class="mock-meal__kcal">320</span>
+                    </li>
+                    <li class="mock-meal mock-meal--live">
+                      <span class="mock-meal__wave" aria-hidden="true"></span>
+                      <span class="mock-meal__text mock-meal__text--voice">“Coffee with milk and…”</span>
+                    </li>
+                    <li class="mock-meal mock-meal--dim">
+                      <span class="mock-meal__icon">🥗</span>
+                      <span class="mock-meal__text">Lunch — later</span>
+                    </li>
+                  </ul>
+                  <button type="button" class="mock-mic" tabindex="-1">
+                    <span class="mock-mic__ring"></span>
+                    <svg width="22" height="22" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                      <path
+                        d="M128 176a48.05 48.05 0 0 0 48-48V64a48 48 0 0 0-96 0v64a48.05 48.05 0 0 0 48 48Zm-32-48a32 32 0 0 1 64 0v64a32 32 0 0 1-64 0Zm112 48v8a80 80 0 0 1-160 0v-8a8 8 0 0 1 16 0v8a64 64 0 0 0 128 0v-8a8 8 0 0 1 16 0Z"
+                      />
+                    </svg>
+                  </button>
+                  <p class="mock-hint">Tap the mic and describe what you ate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Whisper speech</span>
+          <span>·</span>
+          <span>Laya guard</span>
+          <span>·</span>
+          <span>LLM intake</span>
+          <span>·</span>
+          <span>Voice logging</span>
+          <span>·</span>
+          <span>Daily calendar</span>
+          <span>·</span>
+          <span>Apple Sign In</span>
+          <span>·</span>
+          <span>Email OTP</span>
+          <span>·</span>
+          <span>Whisper speech</span>
+          <span>·</span>
+          <span>Laya guard</span>
+          <span>·</span>
+          <span>LLM intake</span>
+          <span>·</span>
+          <span>Voice logging</span>
+          <span>·</span>
+          <span>Daily calendar</span>
+          <span>·</span>
+          <span>Apple Sign In</span>
+          <span>·</span>
+          <span>Email OTP</span>
+        </div>
+      </div>
+
+      <section class="section section--stats">
+        <div class="wrap stats-band">
+          <ul class="stats-band__list">
+            <li class="stats-band__item reveal">
+              <strong class="stats-band__num" data-stat="3">3</strong>
+              <span class="stats-band__label">AI stages from mic to kcal</span>
+            </li>
+            <li class="stats-band__item reveal">
+              <strong class="stats-band__num" data-stat="0">0</strong>
+              <span class="stats-band__label">Manual database hunts per meal</span>
+            </li>
+            <li class="stats-band__item reveal">
+              <strong class="stats-band__num" data-stat="1">1</strong>
+              <span class="stats-band__label">Tap to log your whole day</span>
+            </li>
+            <li class="stats-band__item reveal">
+              <strong class="stats-band__num" data-stat="inf">∞</strong>
+              <span class="stats-band__label">Meals you can describe in plain language</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--spotlight" aria-labelledby="spotlight-title">
+        <div class="wrap spotlight">
+          <header class="spotlight__head reveal">
+            <p class="section__eyebrow">Built different</p>
+            <h2 id="spotlight-title" class="spotlight__title">
+              Your mouth is faster<br class="spotlight__br" />
+              <span class="spotlight__title-accent">than your thumbs.</span>
+            </h2>
+            <p class="spotlight__lead">
+              CaloriVoice is not a search bar with a microphone bolted on. It’s a full voice pipeline —
+              transcribe, validate, parse — so every sentence lands as calories on your calendar.
+            </p>
+          </header>
+          <ul class="spotlight__grid">
+            <li class="spotlight__card reveal">
+              <span class="spotlight__card-num">01</span>
+              <h3>Speak like a human</h3>
+              <p>
+                “Two eggs, sourdough, oat latte, half an avocado.” No barcodes, no scrolling through
+                brands — just how you’d tell a friend.
+              </p>
+            </li>
+            <li class="spotlight__card spotlight__card--featured reveal">
+              <span class="spotlight__card-num">02</span>
+              <h3>AI that stays in its lane</h3>
+              <p>
+                A dedicated guard layer rejects off-topic noise before intake runs — your diary stays
+                food-only, even when life gets weird.
+              </p>
+            </li>
+            <li class="spotlight__card reveal">
+              <span class="spotlight__card-num">03</span>
+              <h3>Numbers you can trust</h3>
+              <p>
+                Structured items, portions, and kcal roll into daily totals and history — the big picture
+                and the line-by-line detail, always in sync.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--compare" aria-labelledby="compare-title">
+        <div class="wrap">
+          <header class="section__head section__head--center reveal">
+            <p class="section__eyebrow">Why switch</p>
+            <h2 id="compare-title">The old way vs. the CaloriVoice way</h2>
+          </header>
+          <div class="compare reveal">
+            <div class="compare__col compare__col--muted">
+              <p class="compare__label">Typical calorie app</p>
+              <ul class="compare__list">
+                <li>Search every ingredient by hand</li>
+                <li>Give up when the brand isn’t in the database</li>
+                <li>Voice as a hidden gimmick, if at all</li>
+                <li>Chatbots that answer anything — not a diary</li>
+              </ul>
+            </div>
+            <div class="compare__divider" aria-hidden="true">
+              <span class="compare__vs">VS</span>
+            </div>
+            <div class="compare__col compare__col--brand">
+              <p class="compare__label">CaloriVoice</p>
+              <ul class="compare__list compare__list--check">
+                <li>One sentence → structured meal</li>
+                <li>Plain language portions &amp; context</li>
+                <li>Voice is the main interface</li>
+                <li>Guard + intake built for food only</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="wrap">
+          <header class="section__head section__head--center reveal">
+            <p class="section__eyebrow">Why CaloriVoice</p>
+            <h2>A calorie diary that feels like the future</h2>
+            <p>
+              Not another food search engine. A voice-native companion that understands portions,
+              context, and your daily goal — then shows it on a calendar you actually want to open.
+            </p>
+          </header>
+          <ul class="feature-grid">
+            <li class="feature-card reveal">
+              <span class="feature-card__tag">Core</span>
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 256 256" fill="currentColor">
+                  <path
+                    d="M128 176a48.05 48.05 0 0 0 48-48V64a48 48 0 0 0-96 0v64a48.05 48.05 0 0 0 48 48Zm112 48v8a80 80 0 0 1-160 0v-8a8 8 0 0 1 16 0v8a64 64 0 0 0 128 0v-8a8 8 0 0 1 16 0Z"
+                  />
+                </svg>
+              </span>
+              <h3>Voice-first logging</h3>
+              <p>
+                Dictate full meals in one breath — “two eggs, sourdough, oat latte.” Edit by voice when
+                portions change.
+              </p>
+            </li>
+            <li class="feature-card reveal">
+              <span class="feature-card__tag">History</span>
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16">
+                  <rect x="40" y="48" width="176" height="176" rx="16" />
+                  <path d="M40 96h176M88 32v32M168 32v32" stroke-linecap="round" />
+                </svg>
+              </span>
+              <h3>Calendar by day</h3>
+              <p>
+                See calories at a glance. Open any date for line items and kcal per entry — your full
+                diary history.
+              </p>
+            </li>
+            <li class="feature-card reveal">
+              <span class="feature-card__tag">Trust</span>
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="14">
+                  <path d="M128 24 40 56v64c0 52 38 88 88 112 50-24 88-60 88-112V56L128 24Z" stroke-linejoin="round" />
+                  <path d="M96 128l24 24 48-48" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h3>Diary-only guard</h3>
+              <p>
+                Built-in Laya safety: only food and calories get through — no random questions, no data
+                leaks mixed into your log.
+              </p>
+            </li>
+            <li class="feature-card reveal">
+              <span class="feature-card__tag">Apple</span>
+              <span class="feature-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round">
+                  <path d="M128 32v32M128 192v32M32 128h32M192 128h32M64 64l24 24M168 168l24 24M64 192l24-24M168 88l24-24" />
+                </svg>
+              </span>
+              <h3>Built for Apple life</h3>
+              <p>
+                Sign in with Apple, Health-aware profile, and a roadmap for Shortcuts, widgets, and Watch
+                — log from lock screen to wrist.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="stack">
+        <div class="wrap stack">
+          <header class="section__head reveal">
+            <p class="section__eyebrow">Under the hood</p>
+            <h2>Enterprise-grade pipeline. Pocket-sized experience.</h2>
+            <p>
+              Every voice note runs through a real microservice chain — speech, guard, intake — so you get
+              structured kcal, not a wall of text.
+            </p>
+          </header>
+          <ol class="stack__flow reveal">
+            <li class="stack__step">
+              <span class="stack__step-label">STT</span>
+              <h3>Whisper on your Mac / edge</h3>
+              <p>Accurate transcription in the language you actually speak at the table.</p>
+            </li>
+            <li class="stack__arrow" aria-hidden="true">→</li>
+            <li class="stack__step">
+              <span class="stack__step-label">Guard</span>
+              <h3>Laya diary classifier</h3>
+              <p>Blocks off-topic prompts before they ever hit your meal model.</p>
+            </li>
+            <li class="stack__arrow" aria-hidden="true">→</li>
+            <li class="stack__step">
+              <span class="stack__step-label">Intake</span>
+              <h3>LLM meal extraction</h3>
+              <p>Items, portions, and kcal estimates — ready for your calendar in seconds.</p>
+            </li>
+          </ol>
+          <blockquote class="quote reveal">
+            <p>
+              “The first calorie app that treats voice as the main interface — not a gimmick buried in a
+              search bar.”
+            </p>
+            <footer>— CaloriVoice design thesis</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="how">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="section__eyebrow">Simple for you</p>
+            <h2>Three steps. Zero spreadsheet energy.</h2>
+            <p>From spoken sentence to daily total — while you’re still in the kitchen.</p>
+          </header>
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step__num">1</span>
+              <div>
+                <h3>Describe your meal</h3>
+                <p>
+                  “Breakfast: two soft eggs, toast, cappuccino.” Or a quick line from a widget or
+                  Shortcut.
+                </p>
+              </div>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">2</span>
+              <div>
+                <h3>Clarify if needed</h3>
+                <p>The app can ask about portion size or ingredients — answer the same way, by voice.</p>
+              </div>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">3</span>
+              <div>
+                <h3>Watch your progress</h3>
+                <p>
+                  Daily totals, remaining kcal, and history — so you can plan ahead and stay on goal.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section cta" id="waitlist">
+        <div class="wrap cta__box">
+          <div class="cta__copy">
+            <h2>Be first on the App Store</h2>
+            <p>
+              We’re polishing the voice loop and onboarding now. Join the list for TestFlight invites and
+              launch-day access — no spam, just calories done right.
+            </p>
+            <ul class="cta__perks">
+              <li>Early TestFlight builds</li>
+              <li>Launch notification</li>
+              <li>Shape the roadmap</li>
+            </ul>
+          </div>
+          <form class="waitlist-form" action="#" method="post" data-waitlist>
+            <label class="visually-hidden" for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit" class="btn btn--primary">Notify me</button>
+            <p class="waitlist-form__note" role="status" data-waitlist-status hidden></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <p class="site-footer__brand">CaloriVoice</p>
+        <p class="site-footer__legal">
+          © <span data-year></span> CaloriVoice. Voice-first calorie diary for iOS.
+        </p>
+        <p class="site-footer__links">
+          <a href="mailto:hello@calorivoice.uk">hello@calorivoice.uk</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

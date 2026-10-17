@@ -1,0 +1,10 @@
+.env
+.env.local
+**/.venv/
+.DS_Store
+
+landing/.pages-build/
+landing/calorivoice-landing-upload.zip
+
+mobile/build/
+mobile/.expo/

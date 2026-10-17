@@ -1,0 +1,362 @@
+{
+  "common": {
+    "continue": "Далее →",
+    "done": "Готово →",
+    "begin": "Начать →",
+    "back": "Назад",
+    "email": "Email",
+    "changeEmail": "Изменить email",
+    "resendCode": "Не пришёл код? Отправить снова",
+    "apple": "Apple",
+    "language": "Язык",
+    "changeLanguage": "Изменить язык",
+    "languageOptions": {
+      "en": "English",
+      "ru": "Русский"
+    },
+    "localeBadge": {
+      "en": "EN",
+      "ru": "RU"
+    }
+  },
+  "auth": {
+    "signInTitle": "Вход",
+    "signInSubtitle": "Код на email — без пароля.",
+    "sessionSaveError": "Не удалось сохранить сессию.",
+    "appleOnlyIos": "Apple — только iOS",
+    "appleNeedsDevBuild": "Apple: нужен development build",
+    "appleUnavailable": "Apple недоступен",
+    "appleSignInFailed": "Не удалось войти через Apple.",
+    "appleNoUserId": "Не удалось получить Apple ID.",
+    "invalidEmail": "Некорректный email",
+    "invalidOtp": "Нужно 6 цифр",
+    "sendCodeFailed": "Не удалось отправить код.",
+    "wrongCode": "Неверный код.",
+    "signInWithApple": "Войти через Apple",
+    "devHint": "Dev: {{code}}",
+    "codeSentToEmail": "Код отправлен на почту — проверьте входящие.",
+    "otpInputA11y": "Ввод шестизначного кода",
+    "otpHiddenA11y": "Скрытое поле кода",
+    "api": {
+      "invalidEmail": "Введите корректный email.",
+      "invalidOtp": "Код — 6 цифр.",
+      "requestCodeFirst": "Сначала запросите код на этот email.",
+      "codeExpired": "Код истёк. Запросите новый."
+    }
+  },
+  "welcome": {
+    "line": "Добро пожаловать в",
+    "brand": "CaloriVoice"
+  },
+  "health": {
+    "import": "Импорт из Apple Health",
+    "fillFromAppleHealth": "Заполнить из «Здоровье»",
+    "importSexAndData": "Пол и данные из Apple Health",
+    "iosOnly": "Apple Health доступен только на iPhone.",
+    "expoGo": "Импорт из Apple Health работает в development build (npm run ios:native), не в Expo Go.",
+    "comingSoon": "Apple Health скоро: нужен native-модуль HealthKit.",
+    "noData": "В Apple Health нет данных или доступ не выдан.",
+    "alertTitle": "Apple Health",
+    "importFailed": "Не удалось импортировать."
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Какая ваша цель?",
+      "subtitle": "Подстроим калории и подсказки под задачу."
+    },
+    "step2": {
+      "title": "Биологический пол",
+      "subtitle": "Нужно для расчёта нормы (можно импорт из Health)."
+    },
+    "step3": {
+      "title": "Дата рождения",
+      "subtitle": "Возраст влияет на дневную норму калорий."
+    },
+    "step4": {
+      "title": "Единицы измерения",
+      "subtitle": "Можно изменить позже в настройках."
+    },
+    "step5": {
+      "title": "Рост и текущий вес",
+      "subtitle": "Текущие данные — база для календаря."
+    },
+    "metrics": {
+      "heightLabel": "РОСТ",
+      "currentWeightLabel": "ТЕКУЩИЙ ВЕС",
+      "targetWeightLabel": "ЦЕЛЕВОЙ ВЕС",
+      "changeUnits": "↑↓ Изменить единицы"
+    },
+    "step6": {
+      "title": "Желаемый вес",
+      "subtitle": "К чему стремитесь по весу."
+    },
+    "step7": {
+      "title": "Активность",
+      "subtitle": "Как проходит ваша типичная неделя."
+    },
+    "units": {
+      "bodyWeight": "Вес тела",
+      "height": "Рост",
+      "water": "Вода",
+      "foodPortions": "Порции еды",
+      "energy": "Энергия"
+    },
+    "placeholders": {
+      "height": "Рост ({{unit}})",
+      "weight": "Вес ({{unit}})",
+      "targetWeight": "Целевой вес ({{unit}})"
+    },
+    "goals": {
+      "lose_weight": {
+        "label": "Похудеть",
+        "hint": "Дефицит и контроль калорий"
+      },
+      "maintain": {
+        "label": "Поддерживать вес",
+        "hint": "Баланс без резких скачков"
+      },
+      "gain_weight": { "label": "Набрать вес", "hint": "Профицит и белок" }
+    },
+    "sex": {
+      "female": "Женский",
+      "male": "Мужской",
+      "other": "Другое",
+      "prefer_not_to_say": "Не указывать"
+    },
+    "activity": {
+      "sedentary": { "label": "Малоактивно", "hint": "Офис, мало шагов" },
+      "lightly_active": {
+        "label": "Лёгкая активность",
+        "hint": "1–3 тренировки в неделю"
+      },
+      "active": { "label": "Активно", "hint": "3–5 тренировок" },
+      "very_active": { "label": "Очень активно", "hint": "Почти каждый день" },
+      "athlete": { "label": "Атлет", "hint": "2× в день / спорт" }
+    }
+  },
+  "profile": {
+    "title": "Профиль",
+    "openA11y": "Открыть профиль",
+    "settingsA11y": "Настройки",
+    "comingSoon": "Скоро.",
+    "cancel": "Отмена",
+    "upgrade": "Улучшить",
+    "appleHealth": "Apple Health",
+    "prepareData": "Подготовить данные",
+    "downloadHint": "ZIP с JSON: профиль, дневник и настройки — всё, что CaloriVoice хранит о вас.",
+    "deleteConfirm": "Локальный профиль будет удалён, вы выйдете из аккаунта на этом устройстве.",
+    "sections": {
+      "personal": "Личное",
+      "info": "Инфо",
+      "account": "Аккаунт"
+    },
+    "menu": {
+      "goals": "Цели и расчёты",
+      "subscription": "Подписка",
+      "notifications": "Уведомления",
+      "healthSync": "Синхронизация здоровья",
+      "appLanguage": "Язык приложения",
+      "help": "Помощь",
+      "about": "О нас",
+      "privacy": "Политика конфиденциальности",
+      "terms": "Условия использования",
+      "medical": "Медицинский дисклеймер",
+      "signInMethod": "Способ входа",
+      "downloadData": "Скачать мои данные",
+      "deleteAccount": "Удалить аккаунт"
+    },
+    "fields": {
+      "goal": "Цель",
+      "sex": "Пол",
+      "birthDate": "Дата рождения",
+      "activity": "Активность"
+    },
+    "metrics": {
+      "height": "Рост",
+      "currentWeight": "Текущий вес",
+      "targetWeight": "Целевой вес"
+    },
+    "units": {
+      "kg": "кг",
+      "lb": "фунт",
+      "cm": "см",
+      "in": "дюйм"
+    }
+  },
+  "home": {
+    "screenTitle": "Сегодня",
+    "screenSubtitle": "Дашборд",
+    "dashboard": {
+      "headline": "Сегодня",
+      "lead": "Обзор дня. Чат для записи еды — в полоске внизу, когда будете готовы.",
+      "yesterday": "Вчера",
+      "calendarTitle": "Календарь",
+      "calendar": {
+        "thisWeek": "Эта неделя",
+        "swipeHint": "Листайте в стороны — другие недели. Нажмите на день или на иконку календаря, чтобы выбрать дату.",
+        "jumpToTodayA11y": "Вернуться к сегодняшнему дню",
+        "openPickerA11y": "Открыть календарь и выбрать день",
+        "pickerTitle": "Выберите день",
+        "pickerDone": "Готово",
+        "pickerHint": "Нажмите на день, чтобы открыть дневник за эту дату.",
+        "closeA11y": "Закрыть календарь",
+        "prevMonthA11y": "Предыдущий месяц",
+        "nextMonthA11y": "Следующий месяц",
+        "dayA11y": "{{weekday}}, {{date}}"
+      },
+      "summaryTitle": "Сводка",
+      "summaryHint": "Калории и БЖУ за сегодня появятся здесь."
+    },
+    "diary": {
+      "nutrition": {
+        "expandA11y": "Развернуть детали питания",
+        "collapseA11y": "Свернуть детали питания"
+      },
+      "eaten": "Съедено",
+      "eatenShort": "Съед.",
+      "remaining": "Осталось",
+      "remainingShort": "Ост.",
+      "goalKcal": "{{count}} ккал",
+      "calorieProgress": "{{percent}}% от нормы",
+      "macroUnitG": "г",
+      "macroUnitMl": "мл",
+      "kcalUnit": "ккал",
+      "macroOfGoal": "из {{goal}} {{unit}}",
+      "macroRemaining": "осталось {{count}} {{unit}}",
+      "goalInfoA11y": "Суточная норма калорий",
+      "empty": "Пока пусто",
+      "sectionKcal": "{{count}} ккал",
+      "waterProgress": "{{percent}}% цели",
+      "waterAmount": "{{amount}} мл",
+      "measurementsHint": "Отслеживай прогресс, а не ощущения",
+      "expandedPlaceholder": "Записи из чата появятся здесь.",
+      "foodSearch": {
+        "placeholder": "Поиск продукта…",
+        "examplePrefix": "Например, ",
+        "create": "Создать",
+        "clearA11y": "Очистить поиск",
+        "addA11y": "Добавить {{name}}",
+        "noResults": "Ничего не найдено. Попробуйте другое название или создайте продукт.",
+        "loadMore": "Ещё",
+        "loadMoreA11y": "Загрузить ещё результаты",
+        "error": "Поиск сейчас недоступен. Проверьте интернет и попробуйте снова.",
+        "loggedCount": "Записей: {{count}}",
+        "proteinLetter": "Б",
+        "fatLetter": "Ж",
+        "carbsLetter": "У",
+        "createTitle": "Создать продукт",
+        "per100g": "На 100 г",
+        "fieldName": "НАЗВАНИЕ",
+        "namePlaceholder": "Название продукта",
+        "fieldProtein": "БЕЛКИ г",
+        "fieldFat": "ЖИРЫ г",
+        "fieldCarbs": "УГЛЕВОДЫ г",
+        "fieldEnergy": "ЭНЕРГИЯ ккал",
+        "isDrink": "Это напиток",
+        "isDrinkHint": "Будет учитываться в воде в дневнике (скоро).",
+        "moreFields": "Больше полей ⌄",
+        "lessFields": "Меньше полей ⌃",
+        "fieldFiber": "КЛЕТЧАТКА г",
+        "fieldSugars": "САХАР г",
+        "fieldSodium": "НАТРИЙ мг",
+        "fieldSatFat": "НАС. ЖИРЫ г",
+        "saveProduct": "Сохранить продукт",
+        "portionLabel": "Порция",
+        "portionA11y": "Порция в граммах",
+        "editPortionA11y": "Изменить порцию: {{name}}",
+        "confirmPortionA11y": "Добавить в приём пищи",
+        "dismissPendingA11y": "Отменить выбор",
+        "removeEntryA11y": "Удалить «{{name}}» из приёма пищи",
+        "tableName": "НАЗВАНИЕ",
+        "tablePortion": "ПОРЦИЯ",
+        "tableKcal": "ККАЛ",
+        "portionDone": "Готово",
+        "openDetailA11y": "Подробнее о «{{name}}»"
+      },
+      "foodDetail": {
+        "crumb": "Продукт · На 100 г · {{category}}",
+        "categoryFood": "Еда",
+        "categoryDrink": "Напитки",
+        "loggedPortion": "В дневнике: {{grams}} {{unit}} · {{kcal}} ккал",
+        "proteinShort": "БЕЛ",
+        "fatShort": "ЖИР",
+        "carbsShort": "УГЛ",
+        "addedSugars": "Добавленный сахар",
+        "drinkHint": "Напиток",
+        "drinkYes": "Да"
+      },
+      "macros": {
+        "kcalShort": "ККАЛ",
+        "proteinShort": "БЕЛ",
+        "proteinTitle": "Белки",
+        "fatShort": "ЖИР",
+        "fatTitle": "Жиры",
+        "carbsShort": "УГЛ",
+        "carbsTitle": "Углеводы",
+        "waterShort": "H2O",
+        "waterTitle": "Вода",
+        "proteinInfoA11y": "Белки",
+        "fatInfoA11y": "Жиры",
+        "carbsInfoA11y": "Углеводы",
+        "waterInfoA11y": "Вода"
+      },
+      "sections": {
+        "breakfast": "Завтрак",
+        "lunch": "Обед",
+        "dinner": "Ужин",
+        "snack": "Перекус",
+        "water": "Вода",
+        "measurements": "Измерения"
+      }
+    },
+    "signedIn": "Вы вошли",
+    "searchPlaceholder": "Что вы съели?",
+    "searchOpenChatA11y": "Открыть чат о еде",
+    "chatTitle": "Чат о еде",
+    "chatSubtitle": "Голос и ответы",
+    "chatEmptyTitle": "Пока нет записей",
+    "chatEmptyBody": "Полоска внизу: нажмите на поле или микрофон и расскажите, что вы съели.",
+    "chatEmpty": "Полоска внизу: нажмите на поле или микрофон и расскажите, что вы съели.",
+    "chatCloseA11y": "Закрыть чат о еде",
+    "backToDiary": "Сегодня",
+    "signOut": "Выйти",
+    "voice": {
+      "tapHint": "Нажмите на микрофон и расскажите, что вы съели",
+      "recordingHint": "Нажмите ещё раз, когда закончите",
+      "processing": "Распознаём речь…",
+      "transcriptLabel": "Текст",
+      "recordFailed": "Не удалось начать запись.",
+      "transcribeFailed": "Ошибка бэкенда при распознавании. Проверь upstream Whisper (:8091).",
+      "backendUnreachable": "Нет связи с {{url}}. docker-up.sh + Whisper + перезапуск Metro (npm run ios).",
+      "devBackend": "Dev backend: {{url}}",
+      "devBackendOk": "Бэкенд доступен (на Mac: Go :8080 + Whisper :8091)",
+      "devBackendFailSim": "Бэкенд недоступен. docker compose up + Whisper; один раз npm run ios:build (HTTP/ATS).",
+      "devBackendFailDevice": "На iPhone укажи EXPO_PUBLIC_STT_API_URL=http://IP_MAC:8080 в mobile/.env и перезапусти Metro.",
+      "guardChecking": "Проверяем безопасность…",
+      "guardPassed": "Проверка пройдена — можно записать приём пищи.",
+      "guardFailed": "Проверка не пройдена — сообщение отклонено.",
+      "guardUnavailable": "Проверка недоступна (RabbitMQ / Guard / Laya).",
+      "intakeChecking": "Разбираем приём пищи локальной LLM…",
+      "intakeUnavailable": "Парсер недоступен (Intake / LM Studio).",
+      "intakeLabel": "JSON разбор",
+      "mealTitle": "Ваш приём пищи",
+      "totalKcal": "~{{count}} ккал всего",
+      "kcalUnit": "ккал",
+      "mealSummary": "Итого",
+      "intakeErrorTitle": "Не удалось разобрать приём пищи",
+      "intakeBadShape": "Неожиданный формат ответа.",
+      "guardReason": {
+        "out_of_scope": "Здесь только дневник еды и калорий.",
+        "mixed_or_off_topic": "Нельзя смешивать еду с другими запросами (крипта, цены, чужие данные…).",
+        "third_party_data": "Запрос чужих персональных данных запрещён.",
+        "injection": "Сообщение выглядит небезопасным.",
+        "laya_error": "Ошибка проверки — попробуйте ещё раз."
+      },
+      "guardReasonUnknown": "Неизвестная причина ({{code}}).",
+      "unknownError": "Неизвестная ошибка.",
+      "emptyTranscript": "Речь не распознана. Попробуйте ещё раз.",
+      "startA11y": "Начать запись голоса",
+      "stopA11y": "Остановить и распознать"
+    }
+  }
+}
